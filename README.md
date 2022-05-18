@@ -1,4 +1,4 @@
-# personalproject1
+# Personal Project 1
 
 Description:
 This following repository is my personal projects that I've carried out during my free time.
