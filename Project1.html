@@ -9,23 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/99fbfcc1b4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="tailwind.css">
-    <!--
-        ### Primary
-
-        - Cyan: hsl(180, 66%, 49%)
-        - Dark Violet: hsl(257, 27%, 26%)
-
-        ### Secondary
-
-        - Red: hsl(0, 87%, 67%)
-
-        ### Neutral
-
-        - Gray: hsl(0, 0%, 75%)
-        - Grayish Violet: hsl(257, 7%, 63%)
-        - Very Dark Blue: hsl(255, 11%, 22%)
-        - Very Dark Violet: hsl(260, 8%, 14%)
-    -->
     <style>
         * {
             font-family: 'Poppins', sans-serif;
@@ -81,10 +64,6 @@
             .card>.wrap p {
                 font-size: 1.1rem;
             }
-        }
-
-        @media(max-width:768px) {
-            .hero {}
         }
 
         .lh {
@@ -293,49 +272,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#nav").click(function () {
-                $("nav").toggle(500)
-            })
-        })
-        let err = `<p class="mt-2 text-red-400 italic text-xl relative z-10">Please add a link!</p>`;
-        let links = document.querySelector('.stored-links')
-
-        document.getElementById('form').addEventListener('submit', (e) => {
-            let value = document.getElementById('search')
-            e.preventDefault()
-
-            if (value.value.trim() === '') {
-                value.classList.add('border-4', 'border-red-400')
-                document.querySelector('#errmsg').innerHTML = err
-            } else {
-                value.classList.remove('border-4', 'border-red-400')
-                document.querySelector('#errmsg').innerHTML = ''
-
-                const shortened_link = generateLink(value.value)
-
-                const card = `<div class="mb-6 card flex justify-between flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
-                <p id="user" class="text-md xs:text-xl">${value.value}</p>
-                <div class="shortlinks flex flex-col xs:flex-row gap-8 items-center mt-4 md:mt-0">
-                    <a href="#" class="cyant text-md xs:text-xl">${shortened_link}</a>
-                    <button id="copy"
-                        class="copybtn transition duration-300 hover:bg-green-700 inline-block text-white cyan px-8 py-3 rounded-lg font-bold tracking-wide">Copy</button>
-                    </div>
-                 </div>`
-                links.innerHTML += card
-            }
-        })
-
-        function generateLink(text) {
-            let randomText = 'abcdefghijklmnoupqrstuwxyz'
-            let shortenedText = `https://rel.ink/`
-            for (let i = 0; i < 6; i++) {
-                shortenedText += randomText.charAt(Math.floor(Math.random() * randomText.length))
-            }
-            return shortenedText
-        }
-    </script>
+    <script defer src="./projectOne.js"></script>
 </body>
 
 </html>
