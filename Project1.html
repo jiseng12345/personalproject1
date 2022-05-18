@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/99fbfcc1b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tailwind.css">
+    <!--
+        ### Primary
+
+        - Cyan: hsl(180, 66%, 49%)
+        - Dark Violet: hsl(257, 27%, 26%)
+
+        ### Secondary
+
+        - Red: hsl(0, 87%, 67%)
+
+        ### Neutral
+
+        - Gray: hsl(0, 0%, 75%)
+        - Grayish Violet: hsl(257, 7%, 63%)
+        - Very Dark Blue: hsl(255, 11%, 22%)
+        - Very Dark Violet: hsl(260, 8%, 14%)
+    -->
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cyan {
+            background: hsl(180, 66%, 49%);
+        }
+
+        .cyant {
+            color: hsl(180, 66%, 49%);
+        }
+
+        .hero {
+            min-height: 75vh;
+        }
+
+        .wrapper-search {
+            background: hsl(257, 27%, 26%);
+        }
+
+        .darkv {
+            background: hsl(257, 27%, 26%);
+        }
+
+        @media(min-width:768px) {
+
+            .left>p {
+                line-height: 2 !important;
+            }
+
+            .left>h1 {
+                line-height: 1.2;
+            }
+
+        }
+
+        main {
+            background: rgb(236, 234, 243);
+        }
+
+        @media(max-width:1270px) {
+            .hero {
+                min-height: 60vh;
+            }
+        }
+
+        @media(max-width:1280px) {
+            .card>.wrap h2 {
+                font-size: 1.5rem;
+            }
+
+            .card>.wrap p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media(max-width:768px) {
+            .hero {}
+        }
+
+        .lh {
+            line-height: 2 !important;
+        }
+
+        .imgs {
+            max-width: unset;
+        }
+
+        .boost {
+            background: hsl(257, 27%, 26%);
+        }
+
+        footer {
+            background: hsl(260, 8%, 14%);
+        }
+
+        .greenline {
+            transform: translateY(3150%);
+        }
+
+        .navlinks a:hover,
+        .social-links a:hover {
+            color: hsl(180, 66%, 49%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="max-w-screen-2xl mx-auto flex justify-between flex-col md:flex-row px-4 pt-12 pb-4 relative">
+        <button id="nav" class="text-4xl text-gray-500 right-6 top-10 absolute md:hidden">&#9776</button>
+        <div class="left-head flex flex-col md:flex-row md:items-center">
+            <h1> <img src="./image/logo9.svg" alt=""> </h1>
+            <nav class="hidden md:block md:ml-12 ">
+                <ul class="flex gap-8 items-center flex-col md:flex-row mt-6 md:mt-0">
+                    <li><a href="#" class="inline-block text-gray-400 hover:text-black">Features</a></li>
+                    <li><a href="#" class="inline-block text-gray-400 hover:text-black">Pricing</a></li>
+                    <li><a href="#" class="inline-block text-gray-400 hover:text-black">Resources</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div
+            class="right-head flex flex-col md:flex-row items-center gap-5 md:gap-10 account mt-6 md:mt-0 hidden md:flex">
+            <a href="#" class="block text-gray-400 hover:text-black">Login</a>
+            <a href="#"
+                class="block rounded-full cyan px-8 py-2 text-white font-bold transition duration-300 hover:bg-green-700">Sign
+                Up</a>
+        </div>
+    </header>
+
+    <section class="hero mt-8 md:mt-14">
+        <div class="max-w-screen-2xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
+            <div class="left w-full md:max-w-screen-sm mt-14 text-center md:text-left md:mt-0 md:pr-10 ">
+                <h1 class="font-bold text-4xl sm:text-6xl xl:text-7xl text-gray-800">More than just shorter links</h1>
+                <p class="mt-3 text-gray-400 leading-loose text-lg xl:text-2xl">Build your brand's recognition and get
+                    detailed
+                    insights on
+                    how
+                    your links are performing.</p>
+                <a href="#"
+                    class="transition duration-300 hover:bg-green-700 inline-block mt-4 md:mt-10 text-white cyan px-8 py-3 rounded-full font-bold tracking-wide">Get
+                    Started</a>
+            </div>
+            <div class="right w-full ">
+                <img src="./image/illustration-working.svg" class="md:w-full" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <main>
+        <div
+            class="search-box overflow-hidden relative transform md:-translate-y-16 wrapper-search max-w-screen-2xl md:mx-auto shadow-lg rounded-lg p-8 sm:py-12 sm:px-12 mt-16 md:mt-0 mx-4">
+            <img src="./image/bg-shorten-desktop.svg" class="imgs hidden md:block absolute top-0 left-0" width="1580"
+                alt="">
+            <img src="./image/bg-shorten-mobile.svg" alt="" class="md:hidden absolute top-0 right-0">
+            <form action="#" id="form" class="grid md:grid-cols-4 box-border gap-5 z-10 relative" novalidate>
+                <input type="text" name="add" id="search"
+                    class="text-gray-600 col-span-3 px-2 xs:px-8 py-4 md:py-5 rounded-lg outline-none focus:ring"
+                    placeholder="Shorten a link here...">
+                <button id="submit" type="submit"
+                    class="transition duration-300 hover:bg-green-700 col-span-3 md:col-span-1 inline-block text-white cyan px-8 py-3 rounded-lg font-bold tracking-wide">Shorten
+                    It!</button>
+            </form>
+            <p id="errmsg"></p>
+        </div>
+
+        <div class="stored-links mx-auto max-w-screen-2xl p-4">
+
+        </div>
+
+        <div class="mt-20 lg:mt-28 statistics max-w-screen-2xl mx-auto md:min-h-screen relative overflow-x-hidden">
+            <span
+                class="greenline mx-auto max-w-screen-md mx-auto w-full cyan blockcyan py-2 shadow-lg hidden lg:block">
+
+            </span>
+            <div class="text-center max-w-screen-sm mx-auto p-4 px-6">
+                <h1 class="font-bold text-4xl xs:text-5xl">Advanced Satistics</h1>
+                <p class="text-gray-400 mt-4 leading-loose text-lg xs:text-xl lh">Track how your links are performing
+                    across the
+                    web with our
+                    advanced staistics
+                    dashboard.</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-7 mt-6 px-6 text-center lg:text-left relative py-4 lg:py-0">
+                <div class="card bg-white rounded-lg shadow-lg px-2 xs:px-10 pt-10 lg:pt-12 pb-8">
+                    <div class="wrap">
+                        <div
+                            class="details rounded-full darkv w-24 h-24 flex items-center justify-center mx-auto lg:mx-0">
+                            <img src="./image/icon-brand-recognition.svg" class="" alt="">
+                        </div>
+                        <h2 class="mt-12 font-bold text-2xl xs:text-3xl">Brand Recognition</h2>
+                        <p class="mt-6 lh text-lg xs:text-xl text-gray-400">Boost your brand recognition with each
+                            click. Generic
+                            links don't
+                            mean a thing.
+                            Branded links help instill confidence in
+                            your content.</p>
+                    </div>
+                </div>
+                <div class="card bg-white  rounded-lg shadow-lg px-10 pt-10 lg:pt-12 pb-8 transform lg:translate-y-24 ">
+                    <div class="wrap">
+                        <div
+                            class="details rounded-full darkv w-24 h-24 flex items-center justify-center mx-auto lg:mx-0">
+                            <img src="./image/icon-detailed-records.svg" class="" alt="">
+                        </div>
+                        <h2 class="mt-12 font-bold text-2xl xs:text-3xl">Detailed Records</h2>
+                        <p class="mt-6 lh text-lg xs:text-xl text-gray-400">Gain insights into who is clicking your
+                            links. Knowing when and where people engage with your content helps inform
+                            better decisions.</p>
+                    </div>
+                </div>
+                <div class="card bg-white rounded-lg shadow-lg px-10 pt-10 lg:pt-12 pb-8 transform lg:translate-y-36 ">
+                    <div class="wrap">
+                        <div
+                            class="details rounded-full darkv w-24 h-24 flex items-center justify-center mx-auto lg:mx-0">
+                            <img src="./image/icon-fully-customizable.svg" class="" alt="">
+                        </div>
+                        <h2 class="mt-12 font-bold text-2xl xs:text-3xl">Fully Customizable</h2>
+                        <p class="mt-6 lh text-lg xs:text-xl text-gray-400">Improve brand awareness and content
+                            discoverability through customizable links, supercharging audience engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="boost text-center mt-16 py-16 relative overflow-hidden">
+            <img src="./image/bg-boost-desktop.svg" class="absolute hidden md:block top-0 imgs 2xl:w-full" width="1580"
+                alt="">
+            <div class="wrap z-10 relative">
+                <h2 class="text-3xl xs:text-5xl text-white font-bold">Boost your links today</h2>
+                <a href="#"
+                    class="transition duration-300 hover:bg-green-700 inline-block mt-10 text-white cyan px-8 py-3 rounded-full font-bold tracking-wide">Get
+                    Started</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-16">
+        <div class="max-w-screen-2xl mx-auto p-4 flex justify-between flex-col md:flex-row items-center md:items-start">
+            <div class="left">
+                <img src="./image/logo9white.svg" alt="">
+            </div>
+            <div
+                class="right flex gap-8 lg:gap-16 xl:gap-32 flex-col md:flex-row items-center md:items-start text-center md:text-left space-y-8 md:space-y-0">
+                <div class="features mt-16 md:mt-0 ">
+                    <h2 class="text-white text-2xl font-bold">Features</h2>
+                    <div class="navlinks mt-8 space-y-4">
+                        <a href="#" class="text-gray-400 block">Link Shortening</a>
+                        <a href="#" class="text-gray-400 block">Branded Links</a>
+                        <a href="#" class="text-gray-400 block">Analytics</a>
+                    </div>
+                </div>
+                <div class="resources">
+                    <h2 class="text-white text-2xl font-bold">Resources</h2>
+                    <div class="navlinks mt-8 space-y-4">
+                        <a href="#" class="text-gray-400 block">Blog</a>
+                        <a href="#" class="text-gray-400 block">Developers</a>
+                        <a href="#" class="text-gray-400 block">Support</a>
+                    </div>
+                </div>
+                <div class="company">
+                    <h2 class="text-white text-2xl font-bold">Company</h2>
+                    <div class="navlinks mt-8 space-y-4">
+                        <a href="#" class="text-gray-400 block">About</a>
+                        <a href="#" class="text-gray-400 block">Our Team</a>
+                        <a href="#" class="text-gray-400 block">Careers</a>
+                        <a href="#" class="text-gray-400 block">Contact</a>
+                    </div>
+                </div>
+                <div class="social-links space-x-4">
+                    <a href="#" class="inline-block text-white text-2xl"> <i class="fa fa-facebook-square"
+                            aria-hidden="true"></i> </a>
+                    <a href="#" class="inline-block text-white text-2xl"> <i class="fa fa-twitter"
+                            aria-hidden="true"></i> </a>
+                    <a href="#" class="inline-block text-white text-2xl"> <i class="fa fa-pinterest"
+                            aria-hidden="true"></i> </a>
+                    <a href="#" class="inline-block text-white text-2xl"> <i class="fa fa-instagram"
+                            aria-hidden="true"></i> </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav").click(function () {
+                $("nav").toggle(500)
+            })
+        })
+        let err = `<p class="mt-2 text-red-400 italic text-xl relative z-10">Please add a link!</p>`;
+        let links = document.querySelector('.stored-links')
+
+        document.getElementById('form').addEventListener('submit', (e) => {
+            let value = document.getElementById('search')
+            e.preventDefault()
+
+            if (value.value.trim() === '') {
+                value.classList.add('border-4', 'border-red-400')
+                document.querySelector('#errmsg').innerHTML = err
+            } else {
+                value.classList.remove('border-4', 'border-red-400')
+                document.querySelector('#errmsg').innerHTML = ''
+
+                const shortened_link = generateLink(value.value)
+
+                const card = `<div class="mb-6 card flex justify-between flex-col md:flex-row bg-white rounded-lg shadow-lg p-6 items-center">
+                <p id="user" class="text-md xs:text-xl">${value.value}</p>
+                <div class="shortlinks flex flex-col xs:flex-row gap-8 items-center mt-4 md:mt-0">
+                    <a href="#" class="cyant text-md xs:text-xl">${shortened_link}</a>
+                    <button id="copy"
+                        class="copybtn transition duration-300 hover:bg-green-700 inline-block text-white cyan px-8 py-3 rounded-lg font-bold tracking-wide">Copy</button>
+                    </div>
+                 </div>`
+                links.innerHTML += card
+            }
+        })
+
+        function generateLink(text) {
+            let randomText = 'abcdefghijklmnoupqrstuwxyz'
+            let shortenedText = `https://rel.ink/`
+            for (let i = 0; i < 6; i++) {
+                shortenedText += randomText.charAt(Math.floor(Math.random() * randomText.length))
+            }
+            return shortenedText
+        }
+    </script>
+</body>
+
+</html>
